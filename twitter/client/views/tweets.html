@@ -1,0 +1,36 @@
+<template name="tweets">
+	<div id="container">
+
+
+		
+  		{{#each tweets}}
+  			<div class="tweet">
+				<div class="user_profile">
+					<img src="{{profile_picture}}">
+					<p> {{real_name}} </p>
+
+				</div>
+				<div class="tweet_content">
+					<div class="tweet_text">
+						{{tweet}}
+					</div>
+
+					{{#if media_url}}
+					<div class="media">
+						{{#if if_video}}
+							<video autoplay="autoplay" loop="true" > 
+			                  <source src="{{video_url}}" type="video/mp4" />
+			                </video>	
+						{{else}}	
+							<img src="{{media_url}}">				
+						{{/if}}
+					</div>
+					{{/if}}
+				</div>
+					
+  			</div>
+		{{/each}}
+
+		</div>
+
+</template>
