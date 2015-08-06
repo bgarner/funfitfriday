@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+	<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Fun Fit Friday</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<script src="js/material.min.js"></script>
+		<link rel="stylesheet" href="css/material.min.css">
+        <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.green-light_green.min.css" /> 
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+
+    <body>
+
+    <div class="mdl-grid">
+
+        <!-- Simple Textfield -->
+        <form action="#">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+            <input class="mdl-textfield__input" type="text" id="firstname" pattern="[A-Z,a-z, ]*" />
+            <label class="mdl-textfield__label" for="firstname">First Name</label>
+            <span class="mdl-textfield__error">First name, please.</span>
+          </div>
+
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+            <input class="mdl-textfield__input" type="text" id="lastname" pattern="[A-Z,a-z, ]*" />
+            <label class="mdl-textfield__label" for="lastname">Last Name</label>
+            <span class="mdl-textfield__error">Last name, please.</span>
+          </div>
+
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4" />
+            <label class="mdl-textfield__label" for="sample4">Extension</label>
+            <span class="mdl-textfield__error">Shouldn't this be a number?</span>
+
+
+            </div>        
+
+             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">  
+
+                            <label for="chkbox1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                    <input type="checkbox" id="chkbox1" class="mdl-checkbox__input" />
+                    <span>I don't know or don't <br />have an extension</span>
+                </label>            
+            </div>
+
+        </form>
+
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Register</button>
+    </div>
+    
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <!-- <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script> -->
+    </body>
+
+</html>
