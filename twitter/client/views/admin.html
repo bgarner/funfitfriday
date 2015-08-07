@@ -1,38 +1,46 @@
 <template name="admin">
-	<h1>Welcome admin</h1>
-	{{>navigation}}
-	{{#if currentUser}}
-	<h2>All Tweets: </h2>
-	{{#each tweets}}
-  			<div class="tweet">
-				<div class="user_profile">
-					<img src="{{profile_picture}}">
-					<p> {{real_name}} </p>
+	<div class="admin-container container">
+		<h1>Welcome admin</h1>
+		<div class="row"></div>
+		
+		<div class="tweet-container  col-md-10">
+			{{#if currentUser}}
+			<h2>All Tweets: </h2>
+			{{#each tweets}}
+	  			<div class="tweet">
+					<div class="user_profile">
+						<img src="{{profile_picture}}">
+						<p> {{real_name}} </p>
 
-				</div>
-				<div class="tweet_content">
-					<div class="tweet_text">
-						{{tweet}}
 					</div>
+					<div >
+						<button class="delete btn btn-danger"> Delete this tweet </button>
+					</div>	
+					<div class="tweet_content">
+						<div class="tweet_text">
+							{{tweet}}
+						</div>
 
-					{{#if media_url}}
-					<div class="media">
-						{{#if if_video}}
-							<video autoplay="autoplay" loop="true" > 
-			                  <source src="{{video_url}}" type="video/mp4" />
-			                </video>	
-						{{else}}	
-							<img src="{{media_url}}">				
+						{{#if media_url}}
+						<div class="media">
+							{{#if if_video}}
+								<video autoplay="autoplay" loop="true" > 
+				                  <source src="{{video_url}}" type="video/mp4" />
+				                </video>	
+							{{else}}	
+								<img src="{{media_url}}">				
+							{{/if}}
+						</div>
 						{{/if}}
 					</div>
-					{{/if}}
-				</div>
-			<div >
-				<button class="delete"> Delete this tweet </button>
-			</div>			
-  			</div>
+							
+	  			</div>
 
-		{{/each}}
-		{{/if}}
-
+			{{/each}}
+			{{/if}}
+		</div>
+		<div class="navigation col-md-2 ">
+		{{>navigation}}
+		</div>
+	</div>
 </template>	
