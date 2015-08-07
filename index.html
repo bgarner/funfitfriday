@@ -7,8 +7,6 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.green-light_green.min.css" /> 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">   
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <!--[if lt IE 9]>
@@ -20,39 +18,85 @@
   <body>
 
     <div class="container-fluid">
+
+      <div class="row">
+        <div class="col-xs-12" style="background-color: #414143; padding: 15px 0px;"> <img class="center-block" src="img/fff.png" /> </div>
+      </div>
+
+      <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-xs-12">
+            <img class="center-block" style="padding: 10px 0px;" src="/img/title.png" />
+        </div>
+      </div>
+
       <div class="row">
           
-          <div class="col-xs-6">
+          <div class="col-md-6 col-xs-12" style="background: transparent url('/img/white50.png') top left repeat;">
+              <h3>Register Now</h3>
+            <form action="#">
 
-              <form action="#">
-
-          <h3>Register</h3>
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
-            <input class="mdl-textfield__input" type="text" id="firstname" pattern="[A-Z,a-z, ]*" />
-            <label class="mdl-textfield__label" for="firstname">First Name</label>
-            <span class="mdl-textfield__error">First name, please.</span>
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" id="firstName" placeholder="First Name">
           </div>
-          <br />
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
-            <input class="mdl-textfield__input" type="text" id="lastname" pattern="[A-Z,a-z, ]*" />
-            <label class="mdl-textfield__label" for="lastname">Last Name</label>
-            <span class="mdl-textfield__error">Last name, please.</span>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" id="lastName" placeholder="Last Name">
           </div>
-          <br />
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
-            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4" />
-            <label class="mdl-textfield__label" for="sample4">Extension</label>
-            <span class="mdl-textfield__error">Shouldn't this be a number?</span>
-            </div>           
+          <div class="form-group">
+            <label for="department">Department</label>
+            <select class="form-control">
+              <option>---- Select ----</option>
+              <option>Marketing</option>
+              <option>Allocations</option>
+              <option>Finance</option>
+              <option>Operations</option>
+              <option>IT</option>
+              <option>Purchasing</option>
+              <option>INA</option>
+              <option>Executive</option>
+            </select>
+          </div>
 
+          <div class="form-group">
+            <label for="extension">Extension</label>
+            <input type="text" class="form-control" id="extension" placeholder="Extension">
+          </div>
+
+          <div class="form-group">
+            <label for="time">Years at FGL</label>
+            <select class="form-control">
+              <option>---- Select ----</option>
+              <option>Less than 1 year</option>
+              <option>1 - 2 years</option>
+              <option>3 - 4 years</option>
+              <option>5+ years</option>
+            </select>
+          </div>
+
+
+          <div class="form-group">
+            <label for="time">How would you rate your fitness level?</label>
+            <select class="form-control">
+              <option>---- Select ----</option>
+              <option>Just getting started</option>
+              <option>Getting better</option>
+              <option>I got this</option>
+              <option>Insane and obsessive</option>
+            </select>
+          </div>
+
+             <button type="submit" class="btn btn-default btn-lg">Register</button>
             </form>
+            <br />
           </div>
-
-          <div class="col-xs-6">
+          
+          <div class="col-md-6 col-xs-12" style="border: thin solid lime;">
             this is where the twitter will go
 
           </div>
-
+          </div>
       </div>
     </div>
 
@@ -68,9 +112,14 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
       <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.1.3.min.js"><\/script>')</script>
     <!--<![endif]-->
-    <script src="js/material.js"></script>
+
+    <script src="js/jquery.backstretch.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+    $.backstretch("/img/background.jpg");
+    </script>
   </body>
 </html>
