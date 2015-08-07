@@ -13,3 +13,7 @@ meteorhacks:npm
 npm-container
 iron:router
 accounts-password
+less
+twbs:bootstrap
+jquery
+copleykj:livestamp

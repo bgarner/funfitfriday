@@ -1,1 +1,54 @@
 /* CSS declarations go here */
+.login-container {
+	text-align: center;
+}
+.tweet-container{
+	background-color: #F5F8FA;
+	padding: 40px;
+}
+.tweet {
+	border: thin solid #e9e9e9;
+	background-color: #fff;
+	padding-left: 30px;
+	margin-top: 20px;
+	padding: 20px;
+}
+.profile{
+}
+
+.profile-image{
+	/*width: 120px;*/
+
+}
+	.profile-image img{
+		
+	}
+
+.username{
+	padding-top: 10px;
+}
+	.real-name{
+		color:#000;
+		font-weight: bold;
+		padding-left: 15px;
+	}
+	.screen-name{
+		color:#a9a9a9;
+	}
+	.created-at{
+		color:#a9a9a9;
+	}
+
+.tweet-content{
+
+}
+	.tweet-text{
+		color: #000;
+	}
+	.media{
+		width:600px;
+	}
+
+.delete{
+	float:right;
+}

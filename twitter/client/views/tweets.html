@@ -1,36 +1,41 @@
 <template name="tweets">
 	<div id="container">
-
-
-		
+		<div class="tweet-container">
   		{{#each tweets}}
-  			<div class="tweet">
-				<div class="user_profile">
+  			<div class="tweet row">
+  				<div class="col col-md-1 profile-image">
 					<img src="{{profile_picture}}">
-					<p> {{real_name}} </p>
-
 				</div>
-				<div class="tweet_content">
-					<div class="tweet_text">
-						{{tweet}}
+				<div class="col col-md-11">
+					<div class="row username">
+						<span class="real-name"> {{real_name}}  </span>
+						<span class="screen-name"> @{{screen_name}}</span>
+						<span class="created-at">{{ livestamp created_at}}</span>
 					</div>
+				
+					<div class="row">
+						<div class="tweet-content col-md-10 col-offset-md-2">
+							<div class="tweet-text">
+								{{tweet}}
+							</div>
 
-					{{#if media_url}}
-					<div class="media">
-						{{#if if_video}}
-							<video autoplay="autoplay" loop="true" > 
-			                  <source src="{{video_url}}" type="video/mp4" />
-			                </video>	
-						{{else}}	
-							<img src="{{media_url}}">				
-						{{/if}}
+							{{#if media_url}}
+							<div class="media">
+								{{#if if_video}}
+									<video autoplay="autoplay" loop="true" > 
+					                  <source src="{{video_url}}" type="video/mp4" />
+					                </video>	
+								{{else}}	
+									<img src="{{media_url}}">				
+								{{/if}}
+							</div>
+							{{/if}}
+						</div>
 					</div>
-					{{/if}}
-				</div>
-					
+				</div>	
   			</div>
 		{{/each}}
-
 		</div>
+	</div>
 
 </template>

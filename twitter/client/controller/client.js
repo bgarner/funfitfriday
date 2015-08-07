@@ -1,4 +1,5 @@
 if (Meteor.isClient) {
+  
   Router.route('/', function(){
     this.render('tweets');
   });
@@ -34,7 +35,8 @@ if (Meteor.isClient) {
             password: password }, 
             function (error) {
               if(error){
-                  console.log(error.reason); 
+                  console.log(error.reason);
+                  alert(error.reason); 
               } else {
                   Router.go("/admin"); 
               }
@@ -75,6 +77,8 @@ if (Meteor.isClient) {
         Meteor.loginWithPassword(email, password, function(error){
           if (error) {
             console.log(error.reason);
+            alert(error.reason); 
+
           }
           else {
               Router.go("/admin");
@@ -82,24 +86,6 @@ if (Meteor.isClient) {
         });
     }
 });
-  // Template.twitterScreen.helpers({
-
-  // 	tweets: function() {
-  //       var topTweet =  Tweets.find({approved_by_moderator: true}, { sort: {approved_at: -1}}).fetch()[0];
-  //       topTweet.checkboxState = checkboxState;
-  //       var result = new Array();
-  //       result.push(topTweet);
-  //       if (checkboxState){
-  //           checkboxState = false ;
-  //       }
-  //       else{
-  //         checkboxState = true;
-  //       }
-  //       return result;
-  //   },
-
-
-  // });
 
 
       
