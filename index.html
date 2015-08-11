@@ -14,6 +14,10 @@
       <script src="js/vendor/respond-1.4.2.min.js"></script>
       <script src="js/vendor/calc.min.js"></script>
     <![endif]-->
+
+    <style>
+    .req{ color: #c00; padding-left: 5px; font-size: 18px;}
+    </style>
   </head>
   <body>
 
@@ -33,61 +37,62 @@
       <div class="row">
           
           <div class="col-md-6 col-xs-12" style="background: transparent url('/img/white50.png') top left repeat;">
-              <h3>Register Now</h3>
-            <form action="#">
+              <h3 id="registration-title">Register Now</h3>
+              <span id="registration-header"></span>
+            <form id="regform">
 
           <div class="form-group">
-            <label for="firstName">First Name</label>
-            <input type="text" class="form-control" id="firstName" placeholder="First Name">
+            <label for="firstName">First Name</label><span class="req">*</span>
+            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name">
           </div>
           <div class="form-group">
-            <label for="lastName">Last Name</label>
-            <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+            <label for="lastName">Last Name</label><span class="req">*</span>
+            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name">
           </div>
           <div class="form-group">
-            <label for="department">Department</label>
-            <select class="form-control">
-              <option>---- Select ----</option>
-              <option>Marketing</option>
-              <option>Allocations</option>
-              <option>Finance</option>
-              <option>Operations</option>
-              <option>IT</option>
-              <option>Purchasing</option>
-              <option>INA</option>
-              <option>Executive</option>
+            <label for="department">Department</label><span class="req">*</span>
+            <select class="form-control" id="department" name="department">
+              <option value="">---- Select ----</option>
+              <option value="Marketing">Marketing</option>
+              <option value="Allocations">Allocations</option>
+              <option value="Finance">Finance</option>
+              <option value="Operations">Operations</option>
+              <option value="IT">IT</option>
+              <option value="Purchasing">Purchasing</option>
+              <option value="INA">INA</option>
+              <option value="Executive">Executive</option>
             </select>
           </div>
 
           <div class="form-group">
             <label for="extension">Extension</label>
-            <input type="text" class="form-control" id="extension" placeholder="Extension">
+            <input type="text" class="form-control" id="extension" name="extension" placeholder="Extension">
           </div>
 
           <div class="form-group">
-            <label for="time">Years at FGL</label>
-            <select class="form-control">
-              <option>---- Select ----</option>
-              <option>Less than 1 year</option>
-              <option>1 - 2 years</option>
-              <option>3 - 4 years</option>
-              <option>5+ years</option>
+            <label for="time">Years at FGL</label><span class="req">*</span>
+            <select class="form-control" id="yearsAtFGL" name="yearsAtFGL">
+              <option value="">---- Select ----</option>
+              <option value="<1">Less than 1 year</option>
+              <option value="1-2">1 - 2 years</option>
+              <option value="3-4">3 - 4 years</option>
+              <option value="5+">5+ years</option>
             </select>
           </div>
 
 
           <div class="form-group">
-            <label for="time">How would you rate your fitness level?</label>
-            <select class="form-control">
-              <option>---- Select ----</option>
-              <option>Just getting started</option>
-              <option>Getting better</option>
-              <option>I got this</option>
-              <option>Insane and obsessive</option>
+            <label for="time">How would you rate your fitness level?</label><span class="req">*</span>
+            <select class="form-control" id="fitnessLevel" name="fitnessLevel">
+              <option value="">---- Select ----</option>
+              <option value="1">Just getting started</option>
+              <option value="2">Getting better</option>
+              <option value="3">I got this</option>
+              <option value="4">Insane and obsessive</option>
             </select>
           </div>
 
-             <button type="submit" class="btn btn-default btn-lg">Register</button>
+             <button type="submit" id="submit" type="submit" class="btn btn-default btn-lg">Register</button>
             </form>
             <br />
           </div>
@@ -99,10 +104,6 @@
           </div>
       </div>
     </div>
-
-
-
-
 
     <!--[if lt IE 9]>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -117,6 +118,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/send.js"></script>
 
     <script>
     $.backstretch("/img/background.jpg");
