@@ -13,7 +13,6 @@
       <script src="js/vendor/respond-1.4.2.min.js"></script>
       <script src="js/vendor/calc.min.js"></script>
     <![endif]-->
-
     <style>
     .req{ color: #c00; padding-left: 5px; font-size: 18px;}
     </style>
@@ -96,9 +95,8 @@
             <br />
           </div>
           
-          <div class="col-md-6 col-xs-12" style="border-left:10px solid #fff; background: transparent url('img/white50.png') top left repeat;" >
-            <iframe src="http://funfitfriday-twitter.meteor.com" style="min-height:603px; "></iframe>
-
+          <div id="twitterapp-container" class="col-md-6 col-xs-12" style="border-left:10px solid #fff; background: transparent url('img/white50.png') top left repeat;" >
+             
           </div>
           </div>
       </div>
@@ -121,6 +119,21 @@
 
     <script>
     $.backstretch("img/background.jpg");
+    var isIE = /*@cc_on!@*/false || !!document.documentMode;
+    if (isIE) {
+
+       document.getElementById("twitterapp-container").innerHTML= '<div style="height:590px; width:600px; border:none !important;">'                                                          +'<p style="font-size: 20px; padding:20px; color:#999999; ">'  
+                                                                   +'If you had a better browser, something cool '+'would be happening'+' in this box!'
+                                                                   +'</p>'
+                                                                  +'</div>'
+
+    }else{
+
+      var parent =  document.getElementById("twitterapp-container");
+      parent.innerHTML = '<iframe src="http://10.12.216.66:3000" style="height:570px; width:600px; border:none !important; "></iframe>';
+      // document.getElementById("twitterapp-container").innerHTML('<iframe src="http://10.12.216.66:3000" style="height:573px; width:600px; "></iframe>');
+    }
+
     </script>
   </body>
 </html>
