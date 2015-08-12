@@ -100,10 +100,10 @@ To ensure you’re placed on a team, please fill out the necessary information b
             <label for="time">How would you rate your fitness level?</label><span class="req">*</span>
             <select class="form-control" id="fitnessLevel" name="fitnessLevel">
               <option value="">---- Select ----</option>
-              <option value="1">Just getting started</option>
-              <option value="2">Getting better</option>
-              <option value="3">I got this</option>
-              <option value="4">Insane and obsessive</option>
+              <option value="1">Level 1 - Just getting started</option>
+              <option value="2">Level 2 - Getting better</option>
+              <option value="3">Level 3 - I got this</option>
+              <option value="4">Level 4 - Insane and obsessive</option>
             </select>
           </div>
 
@@ -139,8 +139,10 @@ To ensure you’re placed on a team, please fill out the necessary information b
     var isIE = /*@cc_on!@*/false || !!document.documentMode;
     if (isIE) {
 
-       document.getElementById("twitterapp-container").innerHTML= '<div style="height:670px; width:600px; border:none !important;">'                                                          +'<p style="font-size: 20px; padding:20px; color:#999999; ">'  
-                                                                   +'If you had a better browser, something cool '+'would be happening'+' in this box!'
+       document.getElementById("twitterapp-container").innerHTML= '<div style="height:670px; width:600px; border:none !important;">'                 
+                                                                    +'<p style="font-size: 20px; padding:20px; color:#999999; ">'  
+                                                                   +'If you had a better browser, something cool would be happening in this box! '
+                                                                   +'Try opening the link in Chrome.'
                                                                    +'</p>'
                                                                   +'</div>'
 
