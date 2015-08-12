@@ -17,7 +17,7 @@ $(document).ready(function() {
 		var yearsVal = $("#yearsAtFGL").val();
 		var fitnessVal = $("#fitnessLevel").val();
 		
-		console.log(fitnessVal);
+		// console.log(fitnessVal);
 		//validation
 		if(fnameVal == '') {
 			$("#label-first").css('color', '#c00');
@@ -67,7 +67,7 @@ $(document).ready(function() {
 			$(this).hide();
 			$("#sendemail").append('<img style="height: 15px; width: 128px;" src="/images/ajax-loader.gif" alt="Sending" id="sending" />');
 
-			$.post("/process.php",
+			$.post("process.php",
    				{ firstname: fnameVal,
    				  lastname: lnameVal, 
    				  extension: extVal,

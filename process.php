@@ -1,14 +1,17 @@
 <?php
 
 //connect to DB
-$host = "localhost";
-$user = "root";
-$pass = "root";
+$host = "calmys1db01.fglsports.dmz";
+$user = "funfitfriday";
+$pass = "funfitfriday";
 $db = "funfitfriday";
 
-$connection = mysqli_connect($host, $user, $pass) or die ("Unable to connect!");
-mysqli_select_db($connection, $db) or die ("Unable to select database!"); 
-
+$connection = mysqli_connect($host, $user, $pass, $db);
+// mysqli_select_db($connection, $db); 
+if (mysqli_connect_errno()) {
+    printf("Connect failed: %s\n", mysqli_connect_error());
+    exit();
+}
 //insert registration
 $q = "INSERT INTO registrations (firstname, lastname, extension, department, fitnesslevel, years) VALUES(
 	 '".$_POST['firstname']."', 
@@ -19,4 +22,4 @@ $q = "INSERT INTO registrations (firstname, lastname, extension, department, fit
 	'".$_POST['yearsAtFGL']."'
 	 )";
 	
-mysqli_query($connection, $q) or die ("Error in query: $q. ".mysql_error());
+mysqli_query($connection, $q) or die ("Error in query: $q. ".mysqli_error($connection));

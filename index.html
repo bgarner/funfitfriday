@@ -35,9 +35,15 @@
       <div class="row">
           
           <div class="col-md-6 col-xs-12" style="background: transparent url('img/white50.png') top left repeat;">
-              <h3 id="registration-title">Register Now</h3>
-              <span id="registration-header"></span>
-            <form id="regform">
+             <div id="registration-title">
+              <h3 >Register Now</h3>
+              <span id="registration-header">
+                Thank you for attending the 2015 Fun Fit Friday Summer Block Party!
+ 
+To ensure you’re placed on a team, please fill out the necessary information below. Registration closes end of day Monday, August 17. Once registered, you will be assigned a Team Captain. They will contact you with more information.
+              </span>
+            </div>
+            <form id="regform" >
 
           <div class="form-group">
             <label for="firstName">First Name</label><span class="req">*</span>
@@ -133,7 +139,7 @@
     var isIE = /*@cc_on!@*/false || !!document.documentMode;
     if (isIE) {
 
-       document.getElementById("twitterapp-container").innerHTML= '<div style="height:590px; width:600px; border:none !important;">'                                                          +'<p style="font-size: 20px; padding:20px; color:#999999; ">'  
+       document.getElementById("twitterapp-container").innerHTML= '<div style="height:670px; width:600px; border:none !important;">'                                                          +'<p style="font-size: 20px; padding:20px; color:#999999; ">'  
                                                                    +'If you had a better browser, something cool '+'would be happening'+' in this box!'
                                                                    +'</p>'
                                                                   +'</div>'
@@ -141,7 +147,7 @@
     }else{
 
       var parent =  document.getElementById("twitterapp-container");
-      parent.innerHTML = '<iframe src="http://funfitfriday-twitter.meteor.com" style="height:570px; width:600px; border:none !important; "></iframe>';
+      parent.innerHTML = '<iframe src="http://funfitfriday-twitter.meteor.com" style="height:660px; width:600px; border:none !important; "></iframe>';
       // document.getElementById("twitterapp-container").innerHTML('<iframe src="http://10.12.216.66:3000" style="height:573px; width:600px; "></iframe>');
     }
 
