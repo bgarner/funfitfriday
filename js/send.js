@@ -12,6 +12,7 @@ $(document).ready(function() {
 		
 		var fnameVal = $("#firstName").val();
 		var lnameVal = $("#lastName").val();
+		var emailVal = $("#email").val();
 		var extVal = $("#extension").val();
 		var deptVal = $("#department").val();
 		var yearsVal = $("#yearsAtFGL").val();
@@ -33,6 +34,16 @@ $(document).ready(function() {
 			$(window).scrollTop(0);
 		}
 
+		if(emailVal == '') {
+			$("#label-last").css('color', '#c00');
+			$("#registration-header").after('<p class="error">Please enter your email.</p>');
+			hasError = true;
+			$(window).scrollTop(0);
+		}
+		else if(!emailReg.test(emailVal)) {	
+			$("#registration-header").after('<p class="error">Please enter a valid email address.</p>');
+			hasError = true;
+		}	
 		// if(extVal == '') {
 		// 	$("#label-last").css('color', '#c00');
 		// 	hasError = true;
@@ -69,7 +80,8 @@ $(document).ready(function() {
 
 			$.post("process.php",
    				{ firstname: fnameVal,
-   				  lastname: lnameVal, 
+   				  lastname: lnameVal,
+   				  email : emailVal, 
    				  extension: extVal,
    				  department: deptVal,
    				  yearsAtFGL: yearsVal,

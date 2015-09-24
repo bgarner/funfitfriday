@@ -13,9 +13,10 @@ if (mysqli_connect_errno()) {
     exit();
 }
 //insert registration
-$q = "INSERT INTO registrations (firstname, lastname, extension, department, fitnesslevel, years) VALUES(
+$q = "INSERT INTO registrations (firstname, lastname, email, extension, department, fitnesslevel, years) VALUES(
 	 '".$_POST['firstname']."', 
 	'".$_POST['lastname']."', 
+	'".$_POST['email']."',
 	'".$_POST['extension']."', 
 	'".$_POST['department']."', 
 	'".$_POST['fitnessLevel']."',
