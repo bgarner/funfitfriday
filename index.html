@@ -112,6 +112,19 @@ To ensure you’re placed on a team, please fill out the necessary information b
             </select>
           </div>
 
+          <div class="form-group">
+            <label for="activity">What activity would you like to do?</label><span class="req">*</span><br>
+            <div class="radio">
+          
+            </div>
+          </div>
+
+          <div class="checkbox">
+            <label> 
+              <input type="checkbox" name="needBus" id="needBus" value="">  Do you need a bus ride?  
+            </label>
+          </div>
+
              <button type="submit" id="submit" type="submit" class="btn btn-default btn-lg">Register</button>
             </form>
             <br />
@@ -140,6 +153,21 @@ To ensure you’re placed on a team, please fill out the necessary information b
     <script src="js/send.js"></script>
 
     <script>
+    $.ajax({
+      dataType: "json",
+      url: "activities.php"
+    })
+    .done(function(data){
+      for (var i=0; i<data.length ; i++) {
+        if(data[i]["left"] <= 0 ){
+          $(".radio").append('<label><input type="radio" name="optionsActivity" value="'+ data[i]["id"] +'" disabled>'+ data[i]["name"]  +' &mdash; Filled</label><br>')
+        }
+        else{
+          $(".radio").append('<label><input type="radio" name="optionsActivity" value="'+ data[i]["id"] +'" >'+ data[i]["name"] +'</label><br>')
+        }
+      }
+    });
+
     $.backstretch("img/background.jpg");
     var isIE = /*@cc_on!@*/false || !!document.documentMode;
     if (isIE) {
@@ -154,10 +182,11 @@ To ensure you’re placed on a team, please fill out the necessary information b
     }else{
 
       var parent =  document.getElementById("twitterapp-container");
-      parent.innerHTML = '<iframe src="http://funfitfriday-twitter.meteor.com" style="height:660px; width:600px; border:none !important; "></iframe>';
+      parent.innerHTML = '<iframe src="http://funfitfriday-twitter.meteor.com" style="height:950px; width:600px; border:none !important; "></iframe>';
       // document.getElementById("twitterapp-container").innerHTML('<iframe src="http://10.12.216.66:3000" style="height:573px; width:600px; "></iframe>');
     }
 
+    
     </script>
   </body>
 </html>

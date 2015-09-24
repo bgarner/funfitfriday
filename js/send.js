@@ -17,6 +17,9 @@ $(document).ready(function() {
 		var deptVal = $("#department").val();
 		var yearsVal = $("#yearsAtFGL").val();
 		var fitnessVal = $("#fitnessLevel").val();
+		var activityVal = $("input:radio[name ='optionsActivity']:checked").val();
+		var busVal = $("#needBus").prop('checked')
+		
 		
 		// console.log(fitnessVal);
 		//validation
@@ -71,6 +74,15 @@ $(document).ready(function() {
 			$(window).scrollTop(0);
 		}
 
+		if(activityVal === undefined){
+			$("#label-last").css('color', '#c00');
+			$("#registration-header").after('<p class="error">Please select an activity.</p>');
+			hasError = true;
+			$(window).scrollTop(0);
+
+		}
+
+
 					
 		if(hasError == false) {
 			//$(this).hide();
@@ -85,13 +97,15 @@ $(document).ready(function() {
    				  extension: extVal,
    				  department: deptVal,
    				  yearsAtFGL: yearsVal,
-   				  fitnessLevel: fitnessVal
+   				  fitnessLevel: fitnessVal,
+   				  activity: activityVal,
+   				  needBus: busVal
    				  
    				},
    					function(data){
 						$("#regform").slideUp("normal", function() {				  						
 							$("#registration-title").hide();											
-							$("#regform").before("<h4>Thank You</h4><br /><p>Your registration has been received, we'll see you at the party!</p><br />");											
+							$("#regform").before("<h4>Thank You</h4><br /><p>Your registration has been received. We'll see you at the party!</p><br />");											
 						});
    					}
 				 );
