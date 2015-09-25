@@ -105,7 +105,7 @@ $(document).ready(function() {
    					function(data){
 						$("#regform").slideUp("normal", function() {				  						
 							$("#registration-title").hide();											
-							$("#regform").before("<h4>Thank You</h4><br /><p>Your registration has been received. We'll see you at the party!</p><br />");											
+							$("#regform").before("<h4>Thank You</h4><br /><p>Your registration has been received. We'll see you at Fun Fit Friday!</p><br />");											
 						});
    					}
 				 );
